@@ -22,22 +22,35 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 5
+        let tGroup : MyGroupModel = mData.mList[section] as! MyGroupModel
+        
+        return tGroup.mList.count
     }
    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let tCell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
-            tCell.textLabel?.text = "Mon titre n° \(indexPath.row)"
+        
+        let tGroup : MyGroupModel = mData.mList[indexPath.section] as! MyGroupModel
+        
+        let tCellData : MyCellModel = tGroup.mList [indexPath.row] as! MyCellModel
+        
+        tCell.textLabel?.text = tCellData.mTitle
+        tCell.detailTextLabel?.text = tCellData.mSubTitle
+            //tCell.textLabel?.text = "Mon titre n° \(indexPath.row) - \(indexPath.row)"
         
             return tCell
     }
     
     public func numberOfSections(in tableView: UITableView) -> Int
     {
-        return 10
+        return mData.mList.count
     }
 
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let tGroup : MyGroupModel = mData.mList[section] as! MyGroupModel
+            return tGroup.mTitle
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +58,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         mTitleLabel?.text = "Thomas"
         ChangeColor(sSender: (mSegmentedBar)!)
-        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitle: "my data", withCellNumber: 10))
+        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitle: "my data A", withCellNumber: 10))
+        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitle: "my data B", withCellNumber: 10))
+        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitle: "my data C", withCellNumber: 10))
         // Do any additional setup after loading the view, typically from a nib.
     }
     

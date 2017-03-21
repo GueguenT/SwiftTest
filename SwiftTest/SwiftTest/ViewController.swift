@@ -8,12 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet var mTitleLabel : UILabel?
     
     @IBOutlet var mSegmentedBar : UISegmentedControl?
     @IBOutlet var mSegmentedBarB : UISegmentedControl?
+    
+    @IBOutlet var mTableView : UITableView?
+    
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 10
+    }
+   
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let tCell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
+            tCell.textLabel?.text = "Mon titre n° \(indexPath.row)"
+        
+            return tCell
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

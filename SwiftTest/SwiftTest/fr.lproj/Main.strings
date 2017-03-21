@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "28V-IT-DOG"; */
+"28V-IT-DOG.text" = "Title";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Mti-LZ-kdD"; */
+"Mti-LZ-kdD.text" = "Subtitle";
+
+/* Class = "UISegmentedControl"; XWH-LO-gwa.segmentTitles[0] = "Blue"; ObjectID = "XWH-LO-gwa"; */
+"XWH-LO-gwa.segmentTitles[0]" = "Blue";
+
+/* Class = "UISegmentedControl"; XWH-LO-gwa.segmentTitles[1] = "Red"; ObjectID = "XWH-LO-gwa"; */
+"XWH-LO-gwa.segmentTitles[1]" = "Red";
+
+/* Class = "UISegmentedControl"; XWH-LO-gwa.segmentTitles[2] = "Green"; ObjectID = "XWH-LO-gwa"; */
+"XWH-LO-gwa.segmentTitles[2]" = "Green";
+
+/* Class = "UILabel"; text = "Hello world"; ObjectID = "mRr-H2-1tf"; */
+"mRr-H2-1tf.text" = "Hello world";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "q9q-vr-2tB"; */
+"q9q-vr-2tB.normalTitle" = "Button";
+
+/* Class = "UISegmentedControl"; tI6-YW-TyP.segmentTitles[0] = "Black"; ObjectID = "tI6-YW-TyP"; */
+"tI6-YW-TyP.segmentTitles[0]" = "Black";
+
+/* Class = "UISegmentedControl"; tI6-YW-TyP.segmentTitles[1] = "LightGray"; ObjectID = "tI6-YW-TyP"; */
+"tI6-YW-TyP.segmentTitles[1]" = "LightGray";
+
+/* Class = "UISegmentedControl"; tI6-YW-TyP.segmentTitles[2] = "Gray"; ObjectID = "tI6-YW-TyP"; */
+"tI6-YW-TyP.segmentTitles[2]" = "Gray";

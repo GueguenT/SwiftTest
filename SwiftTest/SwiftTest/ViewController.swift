@@ -37,6 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         tCell.textLabel?.text = tCellData.mTitle
         tCell.detailTextLabel?.text = tCellData.mSubTitle
+        tCell.imageView?.image = tGroup.mImage
             //tCell.textLabel?.text = "Mon titre n° \(indexPath.row) - \(indexPath.row)"
         
             return tCell
@@ -58,9 +59,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         mTitleLabel?.text = "Thomas"
         ChangeColor(sSender: (mSegmentedBar)!)
-        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitle: "my data A", withCellNumber: 10))
-        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitle: "my data B", withCellNumber: 10))
-        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitle: "my data C", withCellNumber: 10))
+        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitleLocalizationKey: "PenguinTitleKey", withAssetName: "Pingouin", withCellNumber: 10))
+        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitleLocalizationKey: "BeaverTitleKey", withAssetName: "Castor", withCellNumber: 10))
+        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitleLocalizationKey: "ChickTitleKey", withAssetName: "Titi", withCellNumber: 10))
         // Do any additional setup after loading the view, typically from a nib.
     }
     

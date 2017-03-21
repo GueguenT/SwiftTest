@@ -50,24 +50,39 @@
                                     <segment title="Green"/>
                                 </segments>
                                 <connections>
-                                    <action selector="ChangeColor" destination="BYZ-38-t0r" eventType="valueChanged" id="Rnj-9e-Qwu"/>
+                                    <action selector="ChangeColorWithSSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="XW4-VW-IPS"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tI6-YW-TyP">
+                                <rect key="frame" x="16" y="212" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Black"/>
+                                    <segment title="LightGray"/>
+                                    <segment title="Gray"/>
+                                </segments>
+                                <connections>
+                                    <action selector="ChangeColorWithSSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="aTT-d5-YIa"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tI6-YW-TyP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5vC-IU-vYh"/>
                             <constraint firstItem="q9q-vr-2tB" firstAttribute="top" secondItem="mRr-H2-1tf" secondAttribute="bottom" constant="21" id="9Hp-zj-g8H"/>
                             <constraint firstItem="XWH-LO-gwa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9S2-9q-0hh"/>
+                            <constraint firstItem="tI6-YW-TyP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Cfp-bk-d7H"/>
                             <constraint firstItem="XWH-LO-gwa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UZo-QG-Kqm"/>
                             <constraint firstItem="q9q-vr-2tB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="WrJ-b5-Kot"/>
                             <constraint firstItem="mRr-H2-1tf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YYh-RC-fhp"/>
                             <constraint firstItem="mRr-H2-1tf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="c2h-qk-lTX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q9q-vr-2tB" secondAttribute="trailing" constant="50" id="gsQ-0X-zHA"/>
+                            <constraint firstItem="tI6-YW-TyP" firstAttribute="top" secondItem="XWH-LO-gwa" secondAttribute="bottom" constant="8" symbolic="YES" id="kfQ-qa-TXg"/>
                             <constraint firstItem="XWH-LO-gwa" firstAttribute="top" secondItem="q9q-vr-2tB" secondAttribute="bottom" constant="76" id="p9F-gB-6fA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mSegmentedBar" destination="XWH-LO-gwa" id="7Dr-Z8-05X"/>
+                        <outlet property="mSegmentedBarB" destination="tI6-YW-TyP" id="Hch-vs-3fr"/>
                         <outlet property="mTitleLabel" destination="mRr-H2-1tf" id="oQv-Ec-0XC"/>
                     </connections>
                 </viewController>

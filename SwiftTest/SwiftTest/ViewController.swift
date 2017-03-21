@@ -17,10 +17,12 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet var mTableView : UITableView?
     
+    var mData : MyDataModel = MyDataModel()
+    
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 10
+        return 5
     }
    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -30,6 +32,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         
             return tCell
     }
+    
+    public func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 10
+    }
 
     
     override func viewDidLoad() {
@@ -38,6 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         mTitleLabel?.text = "Thomas"
         ChangeColor(sSender: (mSegmentedBar)!)
+        mData.addGroup(sGroup: MyGroupModel.createWithTitle(sTitle: "my data", withCellNumber: 10))
         // Do any additional setup after loading the view, typically from a nib.
     }
     
